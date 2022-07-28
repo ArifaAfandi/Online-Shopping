@@ -1,0 +1,57 @@
+@import "../breakpoints";
+
+.Navbar {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    background-color: transparent;
+
+    h1 {
+        margin-top: 16px;
+        letter-spacing: 2px;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 20px;
+    }
+
+    .icons {
+        margin-top: 16px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(235, 231, 231);
+            border-radius: 6px;
+        }
+
+        margin-left: 20px;
+
+        @include mobile {
+            font-size: 26px;
+        }
+    }
+}
+
+.Navbar.active {
+    background-color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+img {
+    width: 100%;
+    top: 0;
+    z-index: -10;
+}

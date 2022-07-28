@@ -1,0 +1,14 @@
+@import "../breakpoints";
+
+.cards {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.Swiper {
+    .SwiperSlide {
+        display: flex;
+        justify-content: center;
+    }
+}

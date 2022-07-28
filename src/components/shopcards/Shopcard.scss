@@ -1,0 +1,125 @@
+@import "../breakpoints";
+
+.card {
+    width: 90%;
+
+    .normal {
+        height: 500px;
+    }
+
+    cursor: pointer;
+}
+
+.hoverCard {
+    height: 500px;
+
+    @include desktop {
+        opacity: 0.6;
+    }
+}
+
+.shopcard {
+    position: relative;
+}
+
+.normalIconFirst {
+    @include desktop {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+
+        &:hover {
+            background-color: white;
+            color: red;
+            border-radius: 6px;
+        }
+    }
+
+    @include mobile {
+        position: absolute;
+        z-index: 10;
+        right: 100px;
+        bottom: 0;
+    }
+
+    @include tablet {
+        position: absolute;
+        z-index: 10;
+        right: 100px;
+        bottom: 0;
+    }
+}
+
+.normalIconSecond {
+    @include desktop {
+        position: absolute;
+        top: 50%;
+        right: 35%;
+
+        &:hover {
+            background-color: white;
+            border-radius: 6px;
+        }
+    }
+
+    @include mobile {
+        position: absolute;
+        z-index: 10;
+        right: 20px;
+        bottom: 0;
+    }
+
+    @include tablet {
+        position: absolute;
+        z-index: 10;
+        right: 20px;
+        bottom: 0;
+    }
+}
+
+.unvisible {
+    @include desktop {
+        visibility: hidden;
+    }
+
+    @include mobile {
+        visibility: visible;
+    }
+
+    @include tablet {
+        visibility: visible;
+    }
+}
+
+.info {
+    @include desktop {
+        position: absolute;
+        text-align: center;
+        font-size: larger;
+        right: 10%;
+        left: 10%;
+        bottom: 30px;
+
+        h3 {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+    }
+
+    @include mobile {
+        position: absolute;
+        background-color: rgb(0, 122, 255);
+        color: white;
+        width: 100%;
+        bottom: 0;
+    }
+
+    @include tablet {
+        position: absolute;
+        background-color: rgb(0, 122, 255);
+        color: white;
+        width: 100%;
+        bottom: 0;
+        height: 80px;
+    }
+}

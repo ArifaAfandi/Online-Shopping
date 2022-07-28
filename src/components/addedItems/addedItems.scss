@@ -1,0 +1,144 @@
+@import "../breakpoints";
+
+.basketMain {
+    padding-top: 150px;
+    display: flex;
+
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.products {
+    width: 70%;
+    margin-left: 30px;
+
+    @include tablet {
+        width: 100%;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .backIcon {
+            width: fit-content;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(235, 231, 231);
+                border-radius: 6px;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 1.5px;
+        }
+    }
+
+    .itemOfBasket {
+        position: relative;
+        border-bottom: 1px solid grey;
+        display: flex;
+        margin-right: 50px;
+        margin-top: 30px;
+
+        img {
+            height: 250px;
+            width: 25%;
+        }
+
+        .itemAbout {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            font-size: 18px;
+            line-height: 50px;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 30px;
+
+            .buttons {
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-left: 20px;
+
+                button {
+                    cursor: pointer;
+                    width: 34px;
+                    height: 33px;
+                    background-color: transparent;
+                    border-radius: 6px;
+                    font-size: 25px;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 24px;
+                }
+            }
+
+            .deleteIcon {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+.total {
+    width: 25%;
+    border: 1px solid black;
+    height: 260px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 30px;
+
+    button {
+        background-color: rgb(25, 118, 210);
+        width: 100%;
+        padding: 10px;
+        color: white;
+        border: 0;
+        margin-top: 6px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        letter-spacing: 1.5px;
+
+        &:hover {
+            background-color: rgb(20, 94, 168);
+        }
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    div {
+        display: flex;
+        line-height: 50px;
+        justify-content: space-between;
+        font-size: 18px;
+    }
+
+    @include tablet {
+        width: 80%;
+        margin-top: 160px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.empty {
+    text-align: center;
+    margin-top: 150px;
+}
